@@ -1,24 +1,33 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
   <block type="movement_forward" id="105" x="7" y="-2">
     <next>
-      <block type="movement_stop" id="77">
+      <block type="robot_delay" id="107" inline="true">
+        <value name="DELAY">
+          <block type="math_number" id="108">
+            <field name="NUM">578</field>
+          </block>
+        </value>
         <next>
-          <block type="oled_cleardisplay" id="95">
+          <block type="movement_stop" id="77">
             <next>
-              <block type="oled_setcursor" id="35" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="42">
-                    <field name="NUM">578</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="49">
-                    <field name="NUM">356</field>
-                  </block>
-                </value>
+              <block type="oled_cleardisplay" id="95">
                 <next>
-                  <block type="oled_drawtext" id="67">
-                    <field name="TEXT">9+10=21</field>
+                  <block type="oled_setcursor" id="35" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="42">
+                        <field name="NUM">578</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="49">
+                        <field name="NUM">356</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawtext" id="67">
+                        <field name="TEXT">9+10=21</field>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
